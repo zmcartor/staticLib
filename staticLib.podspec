@@ -21,13 +21,13 @@ Pod::Spec.new do |s|
   s.license      = "MIT Licenses are weird"
   s.author       = { "Zach" => "zmcartor@gmail.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/zmcartor/staticLib.git", :commit => "44719df98f" }
+  s.source       = { :git => "https://github.com/zmcartor/staticLib.git", :commit => "5ba3a9c446" }
 
-  s.source_files  = '{*.h , *.a}'
-  s.preserve_paths = "libStaticLib.a"
-  s.library = "StaticLib" , "z"
+  s.source_files  = '**/*.h'
+  s.preserve_paths = 'libStaticLib.a'
+  s.ios.vendored_libraries = 'libStaticLib.a', 'StaticLib'
   s.framework = 'UIKit'
   s.requires_arc = true
-  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/StaticLib"' }
+  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/staticLib/**"' , 'OTHER_LDFLAGS' => '-lObjC'}
 
 end
