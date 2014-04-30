@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/zmcartor/staticLib.git", :commit => "44719df98f" }
 
-  s.source_files  = "include/StaticLib/StaticLib.h"
+  s.source_files  = '{*.h , *.a}'
   s.preserve_paths = "libStaticLib.a"
   s.library = "StaticLib" , "z"
   s.framework = 'UIKit'
