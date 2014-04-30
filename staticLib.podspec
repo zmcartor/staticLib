@@ -26,7 +26,6 @@ Pod::Spec.new do |s|
   s.source_files  = "include/StaticLib/StaticLib.h"
   s.preserve_paths = "libStaticLib.a"
   s.framework = 'UIKit'
-  s.xcconfig = {'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/TestFlightSDK"'}
   s.requires_arc = true
 
 end
