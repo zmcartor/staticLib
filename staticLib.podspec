@@ -25,7 +25,9 @@ Pod::Spec.new do |s|
 
   s.source_files  = "include/StaticLib/StaticLib.h"
   s.preserve_paths = "libStaticLib.a"
+  s.library = "StaticLib" , "z"
   s.framework = 'UIKit'
   s.requires_arc = true
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/StaticLib"' }
 
 end
